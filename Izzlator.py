@@ -10,7 +10,7 @@ print("\n\n")
 print("------------")
 print("THE ISSLATOR")
 print("------------\n")
-n = 2
+n = 0
 phrase = {}
 
 vizzle = "izzle"
@@ -19,13 +19,17 @@ phrase = input("What should I IZZLE for you? ")
 words = phrase.split()
 wlen = len(words)
 for word in words:
-     i += 1
-     if len(word) > 4:
-         n = int(len(word)/2)
-         if (word[1] in ['a','e','i','o','u']):
-             n = 1
-         prizzle = word[:n]
-         words[i] = prizzle + vizzle
+    i += 1
+    if len(word) > 4:
+         j = -1
+         for letter in word:
+             j += 1
+             if (letter in ['a','e','i','o','u']):
+                 n = j
+                 break
+    if len(word) > 4:
+        prizzle = word[:n]
+        words[i] = prizzle + vizzle
 
 print("---------IZZLED--------------") 
 print(*words, sep = " ")
