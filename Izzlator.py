@@ -26,7 +26,8 @@ for word in words:
              j += 1
              if (letter in ['a','e','i','o','u']):
                  n = j
-                 break
+                 if n != 0:
+                     break
     if len(word) > 4:
         prizzle = word[:n]
         words[i] = prizzle + vizzle
